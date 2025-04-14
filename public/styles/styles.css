@@ -1,0 +1,282 @@
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flashMsg{
+    display: none;
+}
+
+.patchDescInput{
+    max-width: 300px;
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin:10px;
+    resize: none;
+}
+
+.patchTitleInput {
+    max-width: 300px;
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin:10px;
+    resize: none;
+}
+
+.successMsg{
+    display: flex;
+    align-items: center;
+    display: block;
+    background-color: rgba(29, 244, 128, 0.5);
+    font-size: 1.1rem;
+    min-height: 50px;
+    min-width: 400px;
+    position: fixed;
+    left: 2%;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin: 5px;
+    top: 100px;
+}
+
+.failMsg{
+    display: flex;
+    align-items: center;
+    display: block;
+    background-color: rgba(244, 29, 29, 0.5);
+    font-size: 1.1rem;
+    min-height: 50px;
+    min-width: 400px;
+    position: fixed;
+    left: 2%;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin: 5px;
+    top: 100px;
+    
+}
+
+.header {
+    height: 70px;
+    background-color: brown;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+}
+
+.header .delete_all{
+    height: 40px;
+    width: fit-content;
+    margin-left: 50px;
+    font-size: 1rem;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.delete_all:hover{
+    border: 3px solid white;
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: end;
+    width: 100%;
+}
+
+.note{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 300px;
+    min-width: 300px;
+    overflow-wrap: break-word;
+}
+
+.note .title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: brown;
+    color: white;
+    width: fit-content;
+    max-width: 200px;
+    border-radius: 5px;
+    min-height: 30px;
+    font-size: 1.2rem;
+    border: 2px solid black;
+    font-weight: bolder;
+   
+}
+
+.note .title::before{
+    content: '➡';
+}
+
+.note .description{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    padding-bottom: 5px;
+    border-bottom: 1px black solid;
+    max-height: 200px;
+    overflow-y: hidden;
+}
+
+.note .description:hover{
+    overflow-y: auto;
+}
+
+.note .description::before{
+    content: '\00a0\00a0\00a0';
+}
+
+.note .modifyBtn{
+    margin: 10px;
+    color:white;
+    min-width: 100px;
+    min-height: 20px;
+    background: brown;
+    font-size: 1.1rem;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+.note .modifyBtn:hover{
+    border: 2px white solid;
+}
+
+.note .deleteBtn{
+    margin: 10px;
+    color:white;
+    min-width: 100px;
+    min-height: 20px;
+    background: darkred;
+    font-size: 1.1rem;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+.note .deleteBtn:hover{
+    border: 2px white solid;
+}
+
+.app_title{
+    margin: 0;
+    padding: 10px;
+    color: white;
+}
+
+
+.note_form{
+    margin: 50px;
+    max-width: fit-content;
+    max-height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    display: block;
+    font-size: 1.5rem;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.note_form textarea{
+    display: block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin:10px;
+    min-width: 500px;
+    resize: none;
+}
+
+.note_form #desc_field{
+    min-height: 120px;
+}
+
+.note_form button{
+    margin: 10px;
+    color:white;
+    min-width: 150px;
+    min-height: 50px;
+    background: brown;
+    font-size: 1.2rem;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+
+button:hover{
+    border: 2px white solid;
+}
+
+.save_btn{
+    min-height: 50px;
+    min-width: 90px;
+    background-color: darkred;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 1.1rem;
+    color: white;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 768px) {
+    h1{
+        font-size: 1.9rem;
+    }
+
+    .note_form textarea {
+        min-width: 80%;
+        max-width: 80%;
+    }
+
+    textarea{
+        min-width: 80%;
+        max-width: 80%;
+        min-height: 120px;
+    }
+
+    .note{
+        min-width: 90%;
+    }
+
+
+    .successMsg{
+        top: 10%;
+    }
+    
+    .failMsg{
+       
+        top: 10%;
+        
+    }
+
+    
+    
+}

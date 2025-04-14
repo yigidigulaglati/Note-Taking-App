@@ -1,19 +1,1 @@
-. Personal Notes App
-Stack: Express + HTML/CSS/JS + PostgreSQL (optional)
-What it does:
 
-Users can create, edit, delete, and view notes.
-
-Use Postgres to store notes, or just use an in-memory array or JSON file to keep it super simple.
-
-Features to build:
-
-Form to add a new note
-
-List view of all notes
-
-Option to edit/delete
-
-Save data to DB or JSON file
-
-👉 Bonus: Add categories/tags or a markdown editor for extra spice.
